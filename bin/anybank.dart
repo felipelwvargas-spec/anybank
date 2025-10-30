@@ -1,17 +1,18 @@
 import 'package:anybank/conta.dart';
 
 void main() {
-  Conta contaMatheus = Conta("Matheus", 1000);
-  Conta contaRoberta = Conta("Roberta", 2000);
+  ContaCorrente contaChris = ContaCorrente("Chris", 4000);
+  ContaPoupanca contaDenise = ContaPoupanca("Denise", 4000);
+  ContaSalario contaSalarioCatarina = ContaSalario("Veloce", 1122663344778899, "Catarina", 5000);
 
-  List<Conta> contas = <Conta>[contaMatheus, contaRoberta];
+  contaChris.imprimeSaldo();
+  contaChris.enviar(4300);
 
-  for (Conta conta in contas){
-    conta.imprimeSaldo();
-  }
-  contaRoberta.receber(3000);
-  contaMatheus.receber(500);
-  contaMatheus.enviar(200);
-  
+  contaDenise.imprimeSaldo();
+  contaDenise.enviar(4300);
+  contaDenise.calculaRendimento();
+  contaDenise.imprimeSaldo();
+
+  contaSalarioCatarina.imprimeSaldo();
 
 }
